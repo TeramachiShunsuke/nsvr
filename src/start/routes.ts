@@ -19,9 +19,8 @@
 */
 import Database from '@ioc:Adonis/Lucid/Database'
 import Route from '@ioc:Adonis/Core/Route'
-// import Route from '@ioc:Adonis/Core/Auth'
 import crypto from 'crypto-js'
-import Hash from '@ioc:Adonis/Core/Hash'
+import UsersController from 'App/Controllers/Http/UsersController'
 
 Route.get('/', async () => {
   return { hello: 'world' }
@@ -34,24 +33,18 @@ Route.get('/db', async () => {
 
 Route.post('/users/add/:id', async ({params}) => {
     const { id } = params;
-    const trx = await Database.transaction()
-    try 
-    {
-      const rtn = await trx
-        .insertQuery()
-        .table('users')
-        .insert({ 
-          username: 'testacount' + id ,
-          password: await Hash.make('test1') ,
-          email: 'like.football.' + id + '@gmail.com'
-        })
-        
-        await trx.commit()
-        return {result : rtn }
-      } catch (error) {
-        await trx.rollback()
-        return {error : error }
-      }
+    const uct = new UsersController()
+    const rtn = await uct.create(id)
+    return {result : rtn }
+})
+
+Route.post('/users/update', async ({request}) => {
+  const id = request.input('id')
+  const username = request.input('username')
+  const email = request.input('email')
+  const uct = new UsersController()
+  const rtn = await uct.update(id,username,email)
+  return {result : rtn }
 })
 
 
