@@ -1,0 +1,287 @@
+mysqld, Version: 10.6.3-MariaDB-1:10.6.3+maria~focal (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: /run/mysqld/mysqld.sock
+Time		    Id Command	Argument
+210807  1:19:52	    29 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    29 Query	select * from `users`
+210807  1:19:57	    29 Query	select * from `users`
+210807  1:20:28	    29 Query	BEGIN
+210807  1:20:29	    29 Query	insert into `users` (`email`, `password`, `username`) values ('like.football.17@gmail.com', '$argon2id$v=19$t=3,m=4096,p=1$p7ha6eFgMo8uSt1pCxX0mQ$tzJDD14Objv6k2GYLQFxZ4flXjDX/yFhkXBaor/CLv8', 'testacount2')
+		    29 Query	ROLLBACK
+210807  1:23:17	    28 Query	lucid
+210807  1:23:26	    28 Query	open lucid
+210807  1:24:38	    28 Query	SELECT DATABASE()
+		    28 Init DB	lucid
+		    28 Query	show databases
+		    28 Query	show tables
+		    28 Field List	adonis_schema 
+		    28 Field List	api_tokens 
+		    28 Field List	users 
+210807  1:24:52	    28 Query	SET GLOBAL general_log=1
+210807  1:28:25	    29 Query	BEGIN
+		    29 Query	insert into `users` (`email`, `password`, `username`) values ('like.football.17@gmail.com', '$argon2id$v=19$t=3,m=4096,p=1$tG64+6WekbFqmUNPBiC36g$zU3fXkNGmNI8AUHUSGNv7r9w90p8DC6IijFtIrZuqdg', 'testacount2')
+		    29 Query	ROLLBACK
+210807  1:28:27	    29 Query	BEGIN
+		    29 Query	insert into `users` (`email`, `password`, `username`) values ('like.football.17@gmail.com', '$argon2id$v=19$t=3,m=4096,p=1$3m7hdo3GOxc0ZpkBaOrXzw$CY4EmO8gDNIPfigCd1DuJq6L0EACmTdPgxJtn+JYy8s', 'testacount2')
+		    29 Query	ROLLBACK
+210807  1:31:38	    30 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    30 Query	BEGIN
+		    30 Query	insert into `users` (`email`, `password`, `username`) values ('like.football.17@gmail.com', '$argon2id$v=19$t=3,m=4096,p=1$Tf09ba6d0IZ7jG89vLwZWQ$cntTacJjiuytKg7Wq6PjQbAnNsMn1Puu68w1NLWXc3M', 'testacount2')
+		    30 Query	ROLLBACK
+210807  1:35:46	    31 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    31 Query	BEGIN
+		    31 Query	insert into `users` (`email`, `password`, `username`) values ('like.football.17@gmail.com', '$argon2id$v=19$t=3,m=4096,p=1$TjEhra9Oq1Yuhnh6UN87mw$kToQenqOIgcPxqR4nD7Ckl5izPmUX6gNznhBNaixiGA', 'testacount2')
+		    31 Query	ROLLBACK
+210807  1:40:57	    32 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    32 Query	BEGIN
+		    32 Query	insert into `users` (`email`, `password`, `username`) values ('like.football.17@gmail.com', '$argon2id$v=19$t=3,m=4096,p=1$Qmf9ne1NX5l4GpbIjNw8fw$10Mwj/A36KE4iFBi3lQcVn0eVQer5tqhFwydqujSftQ', 'testacount2')
+		    32 Query	ROLLBACK
+210807  1:42:57	    28 Quit	
+210807  1:43:21	    33 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    33 Query	SELECT GET_LOCK('1', 0) as lock_status
+		    33 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    33 Query	select max(`batch`) as `batch` from `adonis_schema`
+		    33 Query	select `name` from `adonis_schema`
+		    33 Query	SELECT RELEASE_LOCK('1') as lock_status
+		    33 Quit	
+210807  1:47:07	    34 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    34 Query	SELECT GET_LOCK('1', 0) as lock_status
+		    34 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    34 Query	select max(`batch`) as `batch` from `adonis_schema`
+		    34 Query	select `name` from `adonis_schema`
+210807  1:47:08	    34 Query	BEGIN
+		    34 Query	create table `users` (`id` int unsigned not null auto_increment primary key, `created_at` timestamp, `updated_at` timestamp)
+		    34 Query	ROLLBACK
+		    34 Query	SELECT RELEASE_LOCK('1') as lock_status
+		    34 Quit	
+210807  1:49:03	    35 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    35 Query	SELECT GET_LOCK('1', 0) as lock_status
+		    35 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    35 Query	select max(`batch`) as `batch` from `adonis_schema`
+		    35 Query	select `name` from `adonis_schema`
+		    35 Query	BEGIN
+		    35 Query	create table `users` (`id` int unsigned not null auto_increment primary key, `created_at` timestamp, `updated_at` timestamp)
+		    35 Query	ROLLBACK
+		    35 Query	SELECT RELEASE_LOCK('1') as lock_status
+		    35 Quit	
+210807  1:49:41	    36 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    36 Query	SELECT GET_LOCK('1', 0) as lock_status
+		    36 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    36 Query	select max(`batch`) as `batch` from `adonis_schema`
+		    36 Query	select `name`, `batch`, `migration_time` from `adonis_schema` where `batch` > 0 order by `id` desc
+		    36 Query	BEGIN
+		    36 Query	drop table `api_tokens`
+		    36 Query	delete from `adonis_schema` where `name` = 'database/migrations/1627766055112_api_tokens'
+		    36 Query	COMMIT
+		    36 Query	BEGIN
+		    36 Query	drop table `users`
+		    36 Query	delete from `adonis_schema` where `name` = 'database/migrations/1627766055093_users'
+		    36 Query	COMMIT
+		    36 Query	SELECT RELEASE_LOCK('1') as lock_status
+		    36 Quit	
+210807  1:49:50	    37 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    37 Query	SELECT GET_LOCK('1', 0) as lock_status
+		    37 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    37 Query	select max(`batch`) as `batch` from `adonis_schema`
+		    37 Query	select `name` from `adonis_schema`
+		    37 Query	BEGIN
+		    37 Query	create table `users` (`id` int unsigned not null auto_increment primary key, `email` varchar(255) not null, `password` varchar(180) not null, `remember_me_token` varchar(255) null, `created_at` timestamp not null, `updated_at` timestamp not null)
+		    37 Query	insert into `adonis_schema` (`batch`, `name`) values (1, 'database/migrations/1627766055093_users')
+		    37 Query	COMMIT
+		    37 Query	BEGIN
+		    37 Query	create table `api_tokens` (`id` int unsigned not null auto_increment primary key, `user_id` int unsigned, `name` varchar(255) not null, `type` varchar(255) not null, `token` varchar(64) not null, `expires_at` timestamp null, `created_at` timestamp not null)
+		    37 Query	alter table `api_tokens` add constraint `api_tokens_user_id_foreign` foreign key (`user_id`) references `users` (`id`) on delete CASCADE
+210807  1:49:51	    37 Query	alter table `api_tokens` add unique `api_tokens_token_unique`(`token`)
+		    37 Query	insert into `adonis_schema` (`batch`, `name`) values (1, 'database/migrations/1627766055112_api_tokens')
+		    37 Query	COMMIT
+		    37 Query	BEGIN
+		    37 Query	create table `users` (`id` int unsigned not null auto_increment primary key, `created_at` timestamp, `updated_at` timestamp)
+		    37 Query	ROLLBACK
+		    37 Query	SELECT RELEASE_LOCK('1') as lock_status
+		    37 Quit	
+210807  1:52:00	    38 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    38 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    38 Query	select `name`, `batch`, `migration_time` from `adonis_schema` where `batch` > 0 order by `id` desc
+		    38 Quit	
+210807  1:52:54	    39 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    39 Query	SELECT GET_LOCK('1', 0) as lock_status
+		    39 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    39 Query	select max(`batch`) as `batch` from `adonis_schema`
+		    39 Query	select `name` from `adonis_schema`
+		    39 Query	BEGIN
+		    39 Query	create table `users` (`id` int unsigned not null auto_increment primary key, `created_at` timestamp, `updated_at` timestamp)
+		    39 Query	ROLLBACK
+		    39 Query	SELECT RELEASE_LOCK('1') as lock_status
+		    39 Quit	
+210807  1:54:40	    40 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    40 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    40 Query	select `name`, `batch`, `migration_time` from `adonis_schema` where `batch` > 0 order by `id` desc
+		    40 Quit	
+210807  1:55:39	    41 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    41 Query	SELECT GET_LOCK('1', 0) as lock_status
+		    41 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    41 Query	select max(`batch`) as `batch` from `adonis_schema`
+		    41 Query	select `name` from `adonis_schema`
+		    41 Query	BEGIN
+		    41 Query	create table `users` (`id` int unsigned not null auto_increment primary key, `created_at` timestamp, `updated_at` timestamp)
+		    41 Query	ROLLBACK
+		    41 Query	SELECT RELEASE_LOCK('1') as lock_status
+		    41 Quit	
+210807  2:27:00	    42 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    42 Query	SELECT GET_LOCK('1', 0) as lock_status
+		    42 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    42 Query	select max(`batch`) as `batch` from `adonis_schema`
+		    42 Query	select `name`, `batch`, `migration_time` from `adonis_schema` where `batch` > 0 order by `id` desc
+		    42 Query	BEGIN
+		    42 Query	drop table `api_tokens`
+		    42 Query	delete from `adonis_schema` where `name` = 'database/migrations/1627766055112_api_tokens'
+		    42 Query	COMMIT
+		    42 Query	BEGIN
+		    42 Query	drop table `users`
+		    42 Query	delete from `adonis_schema` where `name` = 'database/migrations/1627766055093_users'
+		    42 Query	COMMIT
+		    42 Query	SELECT RELEASE_LOCK('1') as lock_status
+		    42 Quit	
+210807  2:27:16	    43 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    43 Query	SELECT GET_LOCK('1', 0) as lock_status
+		    43 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    43 Query	select max(`batch`) as `batch` from `adonis_schema`
+		    43 Query	select `name` from `adonis_schema`
+		    43 Query	BEGIN
+		    43 Query	create table `users` (`id` int unsigned not null auto_increment primary key, `email` varchar(255) not null, `password` varchar(180) not null, `remember_me_token` varchar(255) null, `created_at` timestamp not null, `updated_at` timestamp not null)
+		    43 Query	insert into `adonis_schema` (`batch`, `name`) values (1, 'database/migrations/1627766055093_users')
+		    43 Query	COMMIT
+		    43 Query	BEGIN
+		    43 Query	create table `api_tokens` (`id` int unsigned not null auto_increment primary key, `user_id` int unsigned, `name` varchar(255) not null, `type` varchar(255) not null, `token` varchar(64) not null, `expires_at` timestamp null, `created_at` timestamp not null)
+		    43 Query	alter table `api_tokens` add constraint `api_tokens_user_id_foreign` foreign key (`user_id`) references `users` (`id`) on delete CASCADE
+		    43 Query	alter table `api_tokens` add unique `api_tokens_token_unique`(`token`)
+		    43 Query	insert into `adonis_schema` (`batch`, `name`) values (1, 'database/migrations/1627766055112_api_tokens')
+		    43 Query	COMMIT
+		    43 Query	BEGIN
+		    43 Query	create table `users` (`id` int unsigned not null auto_increment primary key, `created_at` timestamp, `updated_at` timestamp)
+		    43 Query	ROLLBACK
+		    43 Query	SELECT RELEASE_LOCK('1') as lock_status
+		    43 Quit	
+210807  2:27:32	    44 Connect	root@172.22.0.3 on lucid using TCP/IP
+210807  2:27:33	    44 Query	SELECT GET_LOCK('1', 0) as lock_status
+		    44 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    44 Query	select max(`batch`) as `batch` from `adonis_schema`
+		    44 Query	select `name`, `batch`, `migration_time` from `adonis_schema` where `batch` > 0 order by `id` desc
+		    44 Query	BEGIN
+		    44 Query	drop table `api_tokens`
+		    44 Query	delete from `adonis_schema` where `name` = 'database/migrations/1627766055112_api_tokens'
+		    44 Query	COMMIT
+		    44 Query	BEGIN
+		    44 Query	drop table `users`
+		    44 Query	delete from `adonis_schema` where `name` = 'database/migrations/1627766055093_users'
+		    44 Query	COMMIT
+		    44 Query	SELECT RELEASE_LOCK('1') as lock_status
+		    44 Quit	
+210807  2:29:27	    45 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    45 Query	SELECT GET_LOCK('1', 0) as lock_status
+		    45 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    45 Query	select max(`batch`) as `batch` from `adonis_schema`
+		    45 Query	select `name` from `adonis_schema`
+		    45 Query	BEGIN
+		    45 Query	create table `users` (`id` int unsigned not null auto_increment primary key, `email` varchar(255) not null, `password` varchar(180) not null, `remember_me_token` varchar(255) null, `created_at` timestamp not null, `updated_at` timestamp not null)
+		    45 Query	insert into `adonis_schema` (`batch`, `name`) values (1, 'database/migrations/1627766055093_users')
+		    45 Query	COMMIT
+		    45 Query	BEGIN
+		    45 Query	create table `api_tokens` (`id` int unsigned not null auto_increment primary key, `user_id` int unsigned, `name` varchar(255) not null, `type` varchar(255) not null, `token` varchar(64) not null, `expires_at` timestamp null, `created_at` timestamp not null)
+		    45 Query	alter table `api_tokens` add constraint `api_tokens_user_id_foreign` foreign key (`user_id`) references `users` (`id`) on delete CASCADE
+		    45 Query	alter table `api_tokens` add unique `api_tokens_token_unique`(`token`)
+		    45 Query	insert into `adonis_schema` (`batch`, `name`) values (1, 'database/migrations/1627766055112_api_tokens')
+		    45 Query	COMMIT
+		    45 Query	SELECT RELEASE_LOCK('1') as lock_status
+		    45 Quit	
+210807  2:29:42	    46 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    46 Query	BEGIN
+		    46 Query	insert into `users` (`email`, `password`, `username`) values ('like.football.17@gmail.com', '$argon2id$v=19$t=3,m=4096,p=1$f7yt5/rwXx2LpcV0hBNLAw$8TKMtfY4wNUTKw+D6nM1OB0IzypPpe5zk4Ov6GEgSfI', 'testacount2')
+		    46 Query	ROLLBACK
+210807  2:30:56	    47 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    47 Query	SELECT GET_LOCK('1', 0) as lock_status
+		    47 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    47 Query	select max(`batch`) as `batch` from `adonis_schema`
+		    47 Query	select `name`, `batch`, `migration_time` from `adonis_schema` where `batch` > 0 order by `id` desc
+		    47 Query	BEGIN
+		    47 Query	drop table `api_tokens`
+		    47 Query	delete from `adonis_schema` where `name` = 'database/migrations/1627766055112_api_tokens'
+		    47 Query	COMMIT
+210807  2:30:57	    47 Query	BEGIN
+		    47 Query	drop table `users`
+		    47 Query	delete from `adonis_schema` where `name` = 'database/migrations/1627766055093_users'
+		    47 Query	COMMIT
+		    47 Query	SELECT RELEASE_LOCK('1') as lock_status
+		    47 Quit	
+210807  2:31:04	    48 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    48 Query	SELECT GET_LOCK('1', 0) as lock_status
+		    48 Query	select * from information_schema.tables where table_name = 'adonis_schema' and table_schema = database()
+		    48 Query	select max(`batch`) as `batch` from `adonis_schema`
+		    48 Query	select `name` from `adonis_schema`
+		    48 Query	BEGIN
+		    48 Query	create table `users` (`id` int unsigned not null auto_increment primary key, `username` varchar(255) not null, `email` varchar(255) not null, `password` varchar(180) not null, `remember_me_token` varchar(255) null, `created_at` timestamp not null, `updated_at` timestamp not null)
+		    48 Query	insert into `adonis_schema` (`batch`, `name`) values (1, 'database/migrations/1627766055093_users')
+		    48 Query	COMMIT
+		    48 Query	BEGIN
+		    48 Query	create table `api_tokens` (`id` int unsigned not null auto_increment primary key, `user_id` int unsigned, `name` varchar(255) not null, `type` varchar(255) not null, `token` varchar(64) not null, `expires_at` timestamp null, `created_at` timestamp not null)
+		    48 Query	alter table `api_tokens` add constraint `api_tokens_user_id_foreign` foreign key (`user_id`) references `users` (`id`) on delete CASCADE
+		    48 Query	alter table `api_tokens` add unique `api_tokens_token_unique`(`token`)
+		    48 Query	insert into `adonis_schema` (`batch`, `name`) values (1, 'database/migrations/1627766055112_api_tokens')
+210807  2:31:05	    48 Query	COMMIT
+		    48 Query	SELECT RELEASE_LOCK('1') as lock_status
+		    48 Quit	
+210807  2:31:36	    49 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    49 Query	BEGIN
+210807  2:31:37	    49 Query	insert into `users` (`email`, `password`, `username`) values ('like.football.17@gmail.com', '$argon2id$v=19$t=3,m=4096,p=1$AMK2aR/R6tiHNsfX4H36Pg$Rkb0clby48s7T5iFjrCgtzpTNHVlIT6psllC+rZ4hVc', 'testacount2')
+		    49 Query	COMMIT
+210807  2:31:44	    49 Query	select * from `users`
+210807  2:31:55	    49 Query	BEGIN
+210807  2:31:56	    49 Query	insert into `users` (`email`, `password`, `username`) values ('like.football.17@gmail.com', '$argon2id$v=19$t=3,m=4096,p=1$Q3ydZxMEeB1OwJmcuhJHoQ$HaZ/xkH1ZyPV+pqXNnWlwGW2M4hAmBssDg+jF4cTSxY', 'testacount2')
+		    49 Query	COMMIT
+210807  2:32:01	    49 Query	select * from `users`
+210807  2:36:44	    49 Query	BEGIN
+		    49 Query	insert into `users` (`email`, `password`, `username`) values ('like.football.17@gmail.com', '$argon2id$v=19$t=3,m=4096,p=1$DLUo9v4e6KLS/WUVJBgpRg$Xn+PfGieXjmJxE3e3laWEmEame2jdReFT0uKMGJ5pnE', 'testacount3')
+		    49 Query	COMMIT
+210807  3:26:41	    49 Query	select * from `users`
+210807  3:39:51	    49 Query	select * from `users`
+210807  3:40:15	    49 Query	select * from `users`
+210807  3:40:24	    49 Query	select * from `users`
+210808 11:03:07	    50 Connect	root@172.22.0.3 on lucid using TCP/IP
+		    50 Query	select * from `users`
+210808 11:06:08	    50 Query	select * from `users` where `email` = 'like.football.17@gmail.com' limit 1
+210808 13:15:18	    51 Connect	root@172.22.0.1 on lucid using TCP/IP
+		    51 Query	set autocommit=1, session_track_schema=1, sql_mode = concat(@@sql_mode,',STRICT_TRANS_TABLES')
+		    51 Query	SELECT @@max_allowed_packet,@@system_time_zone,@@time_zone,@@auto_increment_increment
+		    51 Query	SET @ApplicationName='DBeaver 21.1.4 - Main'
+		    51 Query	SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ
+		    51 Query	use lucid
+210808 13:15:19	    52 Connect	root@172.22.0.1 on lucid using TCP/IP
+		    52 Query	set autocommit=1, session_track_schema=1, sql_mode = concat(@@sql_mode,',STRICT_TRANS_TABLES')
+		    52 Query	SELECT @@max_allowed_packet,@@system_time_zone,@@time_zone,@@auto_increment_increment
+		    52 Query	SET @ApplicationName='DBeaver 21.1.4 - Metadata'
+		    52 Query	use lucid
+		    53 Connect	root@172.22.0.1 on lucid using TCP/IP
+		    53 Query	set autocommit=1, session_track_schema=1, sql_mode = concat(@@sql_mode,',STRICT_TRANS_TABLES')
+		    53 Query	SELECT @@max_allowed_packet,@@system_time_zone,@@time_zone,@@auto_increment_increment
+		    53 Query	SET @ApplicationName='DBeaver 21.1.4 - SQLEditor <users>'
+		    53 Query	SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ
+		    53 Query	use lucid
+		    54 Connect	root@172.22.0.1 on lucid using TCP/IP
+		    54 Query	set autocommit=1, session_track_schema=1, sql_mode = concat(@@sql_mode,',STRICT_TRANS_TABLES')
+		    54 Query	SELECT @@max_allowed_packet,@@system_time_zone,@@time_zone,@@auto_increment_increment
+		    54 Query	SET @ApplicationName='DBeaver 21.1.4 - SQLEditor <Script.sql>'
+		    54 Query	SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ
+		    54 Query	use lucid
+		    51 Query	SELECT * FROM lucid.users
+LIMIT 0, 200
+210808 13:16:10	    51 Query	UPDATE lucid.users
+	SET email='like.football.18@gmail.com'
+	WHERE id=2
+		    51 Query	UPDATE lucid.users
+	SET email='like.football.19@gmail.com'
+	WHERE id=3
+		    51 Query	SELECT x.* FROM lucid.users x
+WHERE x.id = 2
+		    51 Query	SELECT x.* FROM lucid.users x
+WHERE x.id = 3
+		    51 Query	SELECT * FROM lucid.users
+LIMIT 0, 200

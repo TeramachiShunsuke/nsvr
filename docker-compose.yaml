@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+    db:
+        image: mariadb:10.6.3
+        command: --default-authentication-plugin=mysql_native_password
+        volumes: 
+            - ./db/mariadb_data:/var/lib/mysql
+        environment: 
+            MYSQL_ROOT_USER: "root"
+            MYSQL_ROOT_PASSWORD: "password"
+        ports: 
+            - "3306:3306"
+
+    nsvr:
+        build: .
+        command: node ace serve --watch
+        ports: ["8000:8000"]
+        container_name: nsvr
+        volumes:
+            - ./src:/app/src
+        depends_on: 
+            - db
